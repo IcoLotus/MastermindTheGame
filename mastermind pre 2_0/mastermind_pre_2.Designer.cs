@@ -1,6 +1,6 @@
 ﻿namespace mastermind_pre_2_0
 {
-    partial class mmgeneral
+    partial class mastermind_pre_2
     {
         /// <summary>
         /// Required designer variable.

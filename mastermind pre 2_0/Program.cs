@@ -13,7 +13,7 @@ namespace mastermind_pre_2_0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mmgeneral());
+            Application.Run(new mastermind_pre_2());
         }
     }
 }
