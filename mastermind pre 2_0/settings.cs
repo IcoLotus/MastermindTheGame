@@ -14,6 +14,6 @@ namespace mastermind_pre_2_0
         {
 
         }
-        public static int test = 1;
+        public static int codelength = 4;
     }
 }

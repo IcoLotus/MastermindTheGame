@@ -80,11 +80,11 @@
     <Compile Include="settings.Designer.cs">
       <DependentUpon>settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="mastermind_pre_2.cs">
+    <Compile Include="mmgeneral.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mastermind_pre_2.Designer.cs">
-      <DependentUpon>mastermind_pre_2.cs</DependentUpon>
+    <Compile Include="mmgeneral.Designer.cs">
+      <DependentUpon>mmgeneral.cs</DependentUpon>
     </Compile>
     <Compile Include="mainmenu.cs">
       <SubType>Form</SubType>
@@ -100,8 +100,8 @@
     <EmbeddedResource Include="mainmenu.resx">
       <DependentUpon>mainmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mastermind_pre_2.resx">
-      <DependentUpon>mastermind_pre_2.cs</DependentUpon>
+    <EmbeddedResource Include="mmgeneral.resx">
+      <DependentUpon>mmgeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
