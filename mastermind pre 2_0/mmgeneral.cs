@@ -27,26 +27,32 @@ namespace mastermind_pre_2_0
         }
         public void Application_Exit()
         {
-            string s = "codelength = 4";
+            /*string s = "codelength = 4";
             String[] k =  s.Split('=');
             List<String> settingslistauto = File.ReadAllLines("settings_autocode.txt").ToList();
             String[] settings_autocode = new string[69];
-            //File.WriteAllLines("settings_autocode.txt",settings_autocode[]);
+            //File.WriteAllLines("settings_autocode.txt",settings_autocode[]);*/
+            Application.Exit();
         }
         public void Application_Open()
         {
             int linies = 0;
-            String[] settings_auto = new string[69];
-            List<String> settingslistauto = File.ReadAllLines("settings_autocode.txt").ToList();
+            List<String> settingslistauto = File.ReadAllLines("settings.txt").ToList();
             foreach(string lines in settingslistauto)
             {
-                String[] splitter = lines.Split('=');
-                settings_auto[linies] = splitter[1];
                 linies++;
             }
-            settings.a_codelength = Convert.ToInt32(settings_auto[0]);
-            MessageBox.Show(settings_auto[0]);
-            MessageBox.Show(settings_auto[1]);
+            String[] settings_auto = new string[linies];
+            int count = 0;
+            foreach (string lines in settingslistauto)
+            {
+                String[] splitter = lines.Split('=');
+                settings_auto[count] = splitter[1];
+            }
+            settings.auto_codelength = Convert.ToInt32(settings_auto[0]);
+            //MessageBox.Show(settings_auto[0]);
+            //MessageBox.Show(settings_auto[1]);
+            //MessageBox.Show("" + linies);
         }
     }
 }
