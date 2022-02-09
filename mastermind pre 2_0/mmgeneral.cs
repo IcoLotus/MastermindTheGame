@@ -36,9 +36,18 @@ namespace mastermind_pre_2_0
         }
         public void Application_Open()
         {
+            List<String> settingslistauto;
             int linies = 0;
-            List<String> settingslistauto = File.ReadAllLines("settings.txt").ToList();
-            foreach(string lines in settingslistauto)
+            try
+            {
+                settingslistauto = File.ReadAllLines("settings.txt").ToList();
+            }
+            catch
+            {
+                File.Create("settings.txt");
+            }
+            settingslistauto = settingslistauto = File.ReadAllLines("settings.txt").ToList();
+            foreach (string lines in settingslistauto)
             {
                 linies++;
             }
@@ -49,7 +58,7 @@ namespace mastermind_pre_2_0
                 String[] splitter = lines.Split('=');
                 settings_auto[count] = splitter[1];
             }
-            settings.auto_codelength = Convert.ToInt32(settings_auto[0]);
+            //settings.auto_codelength = Convert.ToInt32(settings_auto[0]);
             //MessageBox.Show(settings_auto[0]);
             //MessageBox.Show(settings_auto[1]);
             //MessageBox.Show("" + linies);
